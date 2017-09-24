@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.lang.StringBuilder;
+
+class Main {
+	private static Scanner sc;
+
+	public static void main(String[] args) {
+		sc = new Scanner(System.in);
+		System.out.print("S1: ");
+		String s1 = sc.nextLine();
+		System.out.print("S2: ");
+		String s2 = sc.nextLine();
+
+		StringBuilder sb = new StringBuilder(s1);
+
+		for (int i = 0; i<sb.length(); i++) {
+			if(sb.indexOf(s2)!=-1){
+				sb.delete(sb.indexOf(s2), sb.indexOf(s2)+s2.length() );
+			}
+		}
+
+		System.out.println(sb.toString());
+	}	
+}
